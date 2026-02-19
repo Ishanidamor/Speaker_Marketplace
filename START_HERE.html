@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Speaker Marketplace</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        .welcome-card {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-card">
+            <!-- Main Welcome Card -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-body p-5 text-center">
+                    <i class="fas fa-volume-up fa-5x text-primary mb-4"></i>
+                    <h1 class="fw-bold mb-3">Welcome to Speaker Marketplace!</h1>
+                    <p class="lead text-muted mb-4">
+                        A complete, responsive digital product selling platform with user and admin interfaces
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <span class="badge bg-success fs-6">PHP + MySQL</span>
+                        <span class="badge bg-info fs-6">MDBootstrap</span>
+                        <span class="badge bg-warning fs-6">Responsive</span>
+                        <span class="badge bg-danger fs-6">Dark Mode</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Start Steps -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-rocket me-2"></i> Quick Start (5 Minutes)</h4>
+                </div>
+                <div class="card-body p-4">
+                    <div class="mb-4">
+                        <h5 class="fw-bold">
+                            <span class="step-number">1</span>
+                            Start XAMPP Services
+                        </h5>
+                        <p class="ms-5 text-muted">
+                            Open XAMPP Control Panel → Start <strong>Apache</strong> and <strong>MySQL</strong>
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold">
+                            <span class="step-number">2</span>
+                            Create Database
+                        </h5>
+                        <p class="ms-5 text-muted">
+                            Go to <a href="http://localhost/phpmyadmin" target="_blank">phpMyAdmin</a> → 
+                            Create database: <code>speaker_marketplace</code> → 
+                            Import <code>database.sql</code>
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold">
+                            <span class="step-number">3</span>
+                            Access the Application
+                        </h5>
+                        <div class="ms-5">
+                            <div class="d-grid gap-2">
+                                <a href="index.php" class="btn btn-success btn-lg">
+                                    <i class="fas fa-home me-2"></i> Open User Site
+                                </a>
+                                <a href="admin/login.php" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-shield-alt me-2"></i> Open Admin Panel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default Credentials -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0"><i class="fas fa-key me-2"></i> Default Admin Credentials</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Email:</strong></p>
+                            <code class="fs-5">admin@speakermarket.com</code>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Password:</strong></p>
+                            <code class="fs-5">password</code>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger mt-3 mb-0">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Important:</strong> Change this password immediately in production!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Overview -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-star me-2"></i> Key Features</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4 text-center">
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-mobile-alt feature-icon text-primary"></i>
+                            <h6 class="fw-bold">100% Responsive</h6>
+                            <small class="text-muted">Mobile & Desktop</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-moon feature-icon text-warning"></i>
+                            <h6 class="fw-bold">Dark Mode</h6>
+                            <small class="text-muted">Theme Toggle</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-shopping-cart feature-icon text-success"></i>
+                            <h6 class="fw-bold">Full eCommerce</h6>
+                            <small class="text-muted">Cart & Checkout</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-credit-card feature-icon text-info"></i>
+                            <h6 class="fw-bold">Payment Ready</h6>
+                            <small class="text-muted">Multiple Gateways</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-tachometer-alt feature-icon text-danger"></i>
+                            <h6 class="fw-bold">Admin Panel</h6>
+                            <small class="text-muted">Full Management</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-ticket-alt feature-icon text-primary"></i>
+                            <h6 class="fw-bold">Coupons</h6>
+                            <small class="text-muted">Discount System</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-download feature-icon text-success"></i>
+                            <h6 class="fw-bold">Secure Downloads</h6>
+                            <small class="text-muted">Token-based</small>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <i class="fas fa-headset feature-icon text-warning"></i>
+                            <h6 class="fw-bold">Support System</h6>
+                            <small class="text-muted">Tickets & FAQ</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Links -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="fas fa-book me-2"></i> Documentation</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="README.md" class="list-group-item list-group-item-action" target="_blank">
+                            <i class="fas fa-file-alt me-2 text-primary"></i>
+                            <strong>README.md</strong> - Complete documentation and features
+                        </a>
+                        <a href="SETUP_GUIDE.md" class="list-group-item list-group-item-action" target="_blank">
+                            <i class="fas fa-cog me-2 text-success"></i>
+                            <strong>SETUP_GUIDE.md</strong> - Detailed setup instructions
+                        </a>
+                        <a href="FEATURES.md" class="list-group-item list-group-item-action" target="_blank">
+                            <i class="fas fa-list me-2 text-info"></i>
+                            <strong>FEATURES.md</strong> - Complete feature list (200+ features)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0"><i class="fas fa-code me-2"></i> Tech Stack</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Backend</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fab fa-php text-primary me-2"></i> PHP 7.4+</li>
+                                <li><i class="fas fa-database text-success me-2"></i> MySQL 5.7+</li>
+                                <li><i class="fas fa-server text-info me-2"></i> Apache Server</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Frontend</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fab fa-html5 text-danger me-2"></i> HTML5</li>
+                                <li><i class="fab fa-css3-alt text-primary me-2"></i> CSS3</li>
+                                <li><i class="fab fa-js text-warning me-2"></i> JavaScript</li>
+                                <li><i class="fas fa-palette text-success me-2"></i> MDBootstrap 6</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="card shadow-lg">
+                <div class="card-body text-center p-4">
+                    <h5 class="fw-bold mb-3">Need Help?</h5>
+                    <p class="text-muted mb-3">
+                        Check the documentation files or contact support through the application
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="index.php" class="btn btn-primary">
+                            <i class="fas fa-play me-2"></i> Get Started
+                        </a>
+                        <a href="README.md" class="btn btn-outline-primary" target="_blank">
+                            <i class="fas fa-book me-2"></i> Read Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-white mt-4 mb-4">
+                <p class="mb-2">
+                    <i class="fas fa-heart text-danger"></i> Built with PHP, MySQL & MDBootstrap
+                </p>
+                <p class="mb-0">
+                    <small>Version 1.0.0 | 2024</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+</body>
+</html>
