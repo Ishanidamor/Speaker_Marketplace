@@ -8,7 +8,21 @@ if (session_status() === PHP_SESSION_NONE) {
 require_once __DIR__ . '/database.php';
 
 // Site Configuration
-define('SITE_URL', 'http://localhost/speakermarketplace');
+// Auto-detect SITE_URL when possible to ease local testing and built-in server usage.
+if (!defined('SITE_URL')) {
+    $protocol = 'http';
+    if ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) {
+        $protocol = 'https';
+    }
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost:8000';
+    // Determine base path (useful when served from a subfolder like /speakermarketplace)
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    $basePath = rtrim(dirname($scriptName), '/\\');
+    if ($basePath === '/' || $basePath === '.') {
+        $basePath = '';
+    }
+    define('SITE_URL', sprintf('%s://%s%s', $protocol, $host, $basePath));
+}
 define('UPLOAD_PATH', __DIR__ . '/../uploads/');
 define('SPEAKER_PHOTOS_PATH', UPLOAD_PATH . 'speakers/');
 define('SPEAKER_PORTFOLIO_PATH', UPLOAD_PATH . 'portfolio/');
